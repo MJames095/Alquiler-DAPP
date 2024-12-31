@@ -1,0 +1,27 @@
+Instalar proyecto de Jaime (Alquiler de automóviles mediante contratos inteligentes)
+
+PASO 1: descargar el proyecto desde el repositorio https://github.com/MJames095/Alquiler-DAPP.git
+
+PASO 2: Instalar el programa local de Ganache
+
+PASO 3: Instalar VS Code y si ya se tiene instalado, instalar los lenguajes de programación html, css, JavaScript y Solidity
+
+PASO 4: Instalar la versión 18 de Node.js
+
+PASO 5: Instalar los paquetes de Node.js con "npm install" e instalar las dependencias del proyecto:
+-body-parser
+-cors
+-dotenv
+-ethers
+-express
+-truffle
+
+PASO 6: Borrar la carpeta llamada "Build/Contract" (si es que la tienes) y luego procede a compilar el contrato inteligente con "npx truffle compile"
+
+PASO 7: Migrar el contrato inteligente hacia Ganache con "npx truffle migrate --network development"
+
+PASO 8: Copiar el contract address que aparece en la terminal y reemplaza la dirección que aparece en el archivo dashboard.js con el de la terminal
+
+PASO 9: Después de haber compilado el contrato, aparecerá la carpeta "Build/Contract", abre el archivo .json dentro de esa carpeta, copia el nuevo ABI, borra el ABI que aparece en el archivo dashboard.js y pega el nuevo acá (verifica las partes del ABI a copiar ya que no todas son necesarias).
+
+PASO 10: Depura el server con el comando "node server/server.js" y abre la app en el puerto 3000
